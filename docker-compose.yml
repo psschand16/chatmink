@@ -77,7 +77,7 @@ services:
 
   rails:
     <<: *backend
-    command: ./bin/dev
+    command: bash -c "rm -f tmp/pids/server.pid && ./bin/dev"
     ports:
       - '3000:3000'
 
